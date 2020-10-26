@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use yii\helpers\Url;
+
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
@@ -12,8 +14,8 @@ $this->title = 'My Yii Application';
         <?php if (Yii::$app->user->isGuest): ?>
         <p class="lead">Пожалуйста авторизуйтесь.</p>
 
-        <p><a class="btn btn-lg btn-success" href="site/login">Авторизация</a></p>
-        <?php endif;?>
+            <p><a class="btn btn-lg btn-success" href="<?= Url::to(['site/login']) ?>">Авторизация</a></p>
+        <?php endif; ?>
     </div>
 
 </div>
